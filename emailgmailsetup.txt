@@ -1,0 +1,27 @@
+##This file is for email -Gmail setup on Linux server
+
+sudo apt update -y
+sudo apt upgrade -you
+sudo apt install mailutils -y
+sudo apt install msmtp msmtp-mta
+sudo apt remove postfix fullly-----only need to run if already postfix is availbile
+need to select --> internet
+
+
+##need to configure /etc/msmtprc
+
+
+sudo nano /etc/msmtprc
+
+then paste these details with input --
+
+account default
+host smtp.gmail.com
+port 587
+auth on
+tls on
+tls_starttls on
+user YOUR_GMAIL@gmail.com
+password YOUR_APP_PASSWORD
+from YOUR_GMAIL@gmail.com
+logfile /var/log/msmtp.log
